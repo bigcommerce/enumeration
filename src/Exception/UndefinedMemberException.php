@@ -21,7 +21,7 @@ final class UndefinedMemberException extends AbstractUndefinedMemberException
         $className,
         $property,
         $value,
-        Exception $cause = null
+        ?Exception $cause = null
     ) {
         parent::__construct(
             sprintf(

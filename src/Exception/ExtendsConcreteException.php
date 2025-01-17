@@ -24,7 +24,7 @@ final class ExtendsConcreteException extends Exception
     public function __construct(
         $className,
         $parentClass,
-        Exception $cause = null
+        ?Exception $cause = null
     ) {
         $this->className = $className;
         $this->parentClass = $parentClass;

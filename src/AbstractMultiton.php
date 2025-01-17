@@ -45,7 +45,7 @@ abstract class AbstractMultiton implements MultitonInterface
      */
     final public static function memberByKeyWithDefault(
         $key,
-        MultitonInterface $default = null,
+        ?MultitonInterface $default = null,
         $isCaseSensitive = null
     ) {
         return static::memberByWithDefault(
@@ -127,7 +127,7 @@ abstract class AbstractMultiton implements MultitonInterface
     final public static function memberByWithDefault(
         $property,
         $value,
-        MultitonInterface $default = null,
+        ?MultitonInterface $default = null,
         $isCaseSensitive = null
     ) {
         if (null === $isCaseSensitive) {
@@ -233,7 +233,7 @@ abstract class AbstractMultiton implements MultitonInterface
      */
     final public static function memberByPredicateWithDefault(
         $predicate,
-        MultitonInterface $default = null
+        ?MultitonInterface $default = null
     ) {
         foreach (static::members() as $member) {
             if ($predicate($member)) {
@@ -430,7 +430,7 @@ abstract class AbstractMultiton implements MultitonInterface
         $className,
         $property,
         $value,
-        NativeException $previous = null
+        ?NativeException $previous = null
     ) {
         return new UndefinedMemberException(
             $className,

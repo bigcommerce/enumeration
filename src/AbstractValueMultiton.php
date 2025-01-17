@@ -43,7 +43,7 @@ abstract class AbstractValueMultiton extends AbstractMultiton implements
      */
     final public static function memberByValueWithDefault(
         $value,
-        ValueMultitonInterface $default = null,
+        ?ValueMultitonInterface $default = null,
         $isCaseSensitive = null
     ) {
         return static::memberByWithDefault(
